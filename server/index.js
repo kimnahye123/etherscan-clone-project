@@ -4,8 +4,6 @@
 //2-1. 각 페이지별로, api 를 따와야하는 정보를 분석
 //2-2. 분석한 정보를 구현.
 
-
-
 const express = require('express');
 const app = express();
 const port = 8080;
@@ -19,8 +17,11 @@ app.use(cors({
   methods: ["GET", "POST", "OPTIONS"]
 }))
 
-app.get('/balance', AccountRouter)// 잔액조회
-//app.get('/account', accountStatus) // 계정조회
+
+app.get('/account/:id', AccountRouter); // 계정조회
+app.get("/transaction/:id", TransactionRouter);
+app.get("/contract/:id", ContractRouter);
+
 
 
 app.get('/', (req, res) => {
