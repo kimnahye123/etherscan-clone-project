@@ -9,6 +9,7 @@ const app = express();
 const port = 8080;
 const cors = require('cors');
 const AccountRouter = require('./controller/AccountRouter');
+const ContractRouter = require('./controller/ContractRouter');
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
@@ -18,8 +19,8 @@ app.use(cors({
 }))
 
 
-app.get('/account/:id', AccountRouter); // 계정조회
-app.get("/transaction/:id", TransactionRouter);
+//app.get('/account/:id', AccountRouter); // 계정조회
+//app.get("/transaction/:id", TransactionRouter);
 app.get("/contract/:id", ContractRouter);
 
 
