@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { ImCoinDollar } from 'react-icons/im';
 
 //format
 
@@ -40,23 +41,39 @@ function AccountPage() {
 
   return (
     <div className="Rectangle-1">
-      <h1 className="ETHERSCAN">ETHERSCAN</h1>
-
-      <input
-        className="Search"
-        type="text"
-        onChange={handleAddress}
-        placeholder="Search by Address"
-      ></input>
-      <button className="button" onClick={handleAddressButton}>
-        click
-      </button>
+      <div>
+        <h2 className="etherscanLogo">
+          EtherScan
+          <img
+            className="etherscanImage"
+            src="/logos/etherscan-logo-circle.png"
+            alt="etsc"
+          />
+        </h2>
+      </div>
+      <div className="SearchParent">
+        <div className="SearchBox">
+          <input
+            className="Search"
+            type="text"
+            onChange={handleAddress}
+            placeholder="Search by Address"
+          ></input>
+        </div>
+        <div className="Vector">
+          <ImCoinDollar
+            size="45"
+            color="white"
+            cursor="pointer"
+            onClick={handleAddressButton}
+          />
+        </div>
+      </div>
       <div className="Rectangle-2">
-        <span className="Balance">
-          Balance :
-          <span className="text-style-1">
-            {balance}ETH {(balance * eth).toLocaleString()}WON
-          </span>
+        Balance:
+        <span className="-ETH">
+          {balance}ETH <br />
+          <p className="-WON">{(balance * eth).toLocaleString()}WON</p>
         </span>
       </div>
     </div>
