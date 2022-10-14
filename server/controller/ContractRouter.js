@@ -30,7 +30,7 @@ module.exports = async (req, res) => {
 
 // 2. result 의 0번째 값을 넘겨줘야합니다.
 /* module.exports = async (req, res) => {
-  await axios.get("https://api-goerli.etherscan.io/api?module=account&action=txlist&address=0xe9a2bb3eFa3A4CA5d8C68125ddAC055458A8D26c&startblock=0&endblock=99999999&page=1&offset=10&sort=asc&apikey=HITFAXH5M9GFJ3MQA5XT6WY3XRTDV3YCPT")
+  await axios.get("https://api-goerli.etherscan.io/api?module=account&action=txlist&address=0xe9a2bb3eFa3A4CA5d8C68125ddAC055458A8D26c&startblock=0&endblock=99999999&page=1&offset=10&sort=asc&apikey=")
   .then(result => {
     console.log(result.data.result.length)
     return res.json(result.data.result[0])
