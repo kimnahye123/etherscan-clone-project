@@ -1,4 +1,5 @@
 import React from 'react'
+
 import "./LandingPage.css";
 import {NavLink, Link} from 'react-router-dom'
 import AccountPage from './AccountPage';
@@ -21,20 +22,3 @@ function LandingPage() {
 }
 
 export default LandingPage
-
-
-
-
-/* const [account, setAccount] = useState(0);
-const [txn, setTxn] = useState('');
-
-const promise = async () => {
-  try {
-    let a = await axios.get("http://localhost:8080/balance")
-    console.log(a.data.hash)
-    setTxn(a.data.hash)
-    setAccount(a.data.from)
-  } catch (e) {
-    return e
-  }
-} */

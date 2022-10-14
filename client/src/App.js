@@ -1,9 +1,11 @@
+
 import React, {useState} from 'react'
 import LandingPage from './components/views/LandingPage';
 import AccountPage from './components/views/AccountPage';
 import ContractPage from './components/views/ContractPage';
 import TransactionPage from './components/views/TransactionPage';
 import {Routes, BrowserRouter as Router,Route} from 'react-router-dom'
+import './App.css';
 
 function App() {
 
@@ -19,4 +21,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
