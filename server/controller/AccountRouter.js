@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
   try {
     await axios
       .get(
-        `https://api-goerli.etherscan.io/api?module=account&action=balance&address=${id}&tag=latest&apikey=${process.env.APIKEY_NAHYE}`,
+        `https://api-goerli.etherscan.io/api?module=account&action=balance&address=${id}&tag=latest&apikey=${process.env.APIKEY}`,
       )
       .then((result) => {
         console.log(result.data.result);

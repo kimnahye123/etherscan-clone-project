@@ -1,10 +1,7 @@
 import React from 'react'
 
 import "./LandingPage.css";
-import {NavLink, Link} from 'react-router-dom'
-import AccountPage from './AccountPage';
-import TransactionPage from './TransactionPage';
-import ContractPage from './ContractPage';
+import {NavLink} from 'react-router-dom'
 
 function LandingPage() {
   return (
