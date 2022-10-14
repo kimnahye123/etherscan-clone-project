@@ -1,29 +1,21 @@
 import React, {useState} from 'react'
-import axios from 'axios';
-//asdfasdfds
-function App() {
-  const [account, setAccount] = useState(0);
-  const [txn, setTxn] = useState('');
+import LandingPage from './components/views/LandingPage';
+import AccountPage from './components/views/AccountPage';
+import ContractPage from './components/views/ContractPage';
+import TransactionPage from './components/views/TransactionPage';
+import {Routes, BrowserRouter as Router,Route} from 'react-router-dom'
 
-  const promise = async () => {
-    try {
-      let a = await axios.get("http://localhost:8080/balance")
-      console.log(a.data.hash)
-      setTxn(a.data.hash)
-      setAccount(a.data.from)
-    } catch (e) {
-      return e
-    }
-  }
+function App() {
 
   return (
-    <>
-      <div>
-        <button onClick={promise}>click</button>
-        <p>{account}</p>
-        <p>{txn}</p>
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/account" element={<AccountPage/>}></Route>
+        <Route path="/transaction" element={<TransactionPage />}></Route>
+        <Route path="/contract" element={<ContractPage />}></Route>
+      </Routes>
+    </Router>
   )
 }
 
