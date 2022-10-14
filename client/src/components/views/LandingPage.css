@@ -1,0 +1,58 @@
+
+.etherscan {
+  color: rgba(55, 55, 55, 0.826);
+  padding: 30px 30px 250px 30px;
+  margin: 4px 5px;
+
+  text-align: center;
+  font-size: 35px;
+  background-color: rgba(157, 137, 94, 0.191);
+  border-radius: 7px;
+  border: 1.5px solid rgba(157, 137, 94, 0.754);
+}
+
+.etherscanImage {
+  width: 30px;
+  margin-left: 15px;
+}
+
+.landing_container {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.column {
+  color: rgba(55, 55, 55, 0.826);
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+  height: 450px;
+  border-radius: 7px;
+  margin: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  
+}
+
+.account {
+  background-color: rgba(189, 96, 96, 0.395);
+  border: 1.5px solid rgba(189, 96, 96, 0.312);
+}
+.transaction {
+  background-color: blanchedalmond;
+  border: 1.5px solid rgb(212, 196, 172);
+}
+.contract {
+  background-color: rgba(255, 127, 80, 0.395);
+  border: 1.5px solid rgba(255, 127, 80, 0.579);
+}
+
+@media (max-width: 600px) {
+  .landing_container {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}

@@ -1,3 +1,14 @@
+const dotenv = require('dotenv');
+dotenv.config();
+const axios = require('axios')
+
+module.exports = async (req, res) => {
+  console.log(req.params.id)
+  await axios.get(`https://api-goerli.etherscan.io/api?module=account&action=txlist&address=${req.params.id}&startblock=0&endblock=99999999&page=1&offset=10&sort=asc&apikey=${process.env.APIKEY}`)
+  .then(result => res.json(result.data.result[0]))
+  .catch(e => res.send(e))
+}
+
 // Contract Router 에서 필요한 APi 요청들
 
 // 1. balance(컨트랙트 주소의 balance)
